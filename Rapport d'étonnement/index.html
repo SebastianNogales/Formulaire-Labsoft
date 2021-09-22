@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styleFormulaire.css">
+    <script type="text/javascript" src="js/fonctions.js"></script>
+   
+    <title>Rapport d'étonnement</title>
+  </head>
+  <body>
+    
+    <div id="particles-js" class="fond">
+      
+      <div id="corps">
+        <div id="rapport">
+
+          <img src="images/logo.png" alt="logo" id="logo">
+          <h1>Rapport d'étonnement</h1>
+          <p id="intro">
+            Chers Labsoften(nes),
+            <br><br>
+            Continuellement en recheche d’amélioration et afin de nous donner une vision critique et constructive de l’image que peut renvoyer notre entreprise, 
+            Labsoft vous propose de remplir ce petit questionnaire.
+          </p>
+        
+          <form method="POST" action="php/envoyer.php">
+      
+            <h3>Informations Personelles</h3><br>
+            
+            <label for="">Rendre le formulaire confidentiel</label>
+            <label class="switch">
+              <input type="checkbox" id="oui" onclick="check()">
+              <span class="slider round"></span>
+            </label>
+            <label id="onOff">&nbsp; Off</label>
+            <br><br>
+            <div id="nomPrenom" style="display: block;">
+              <label for="nom">Nom *</label><br><input type="text" id="nom" name="nom" required><br><br>
+              <label for="prenom">Prénom *</label><br><input type="text" id="prenom" name="prenom" required><br><br>
+            </div>
+          
+            <label for="dateEntree">Date d'entrée *</label><br><input type="date" id="dateEntree" name="dateEntree" required><br><br>
+            <label for="fonction">Fonction *</label><br><input type="text" id="fonction" name="fonction" required><br><br>
+            <label for="typeContrat">Type de contrat *</label><br>
+            <select name="typeContrat" id="typeContrat" required>
+              <option value="">Veuillez choisir votre type de contrat</option>
+              <option value="CDI">CDI – Contrat à durée indéterminée</option>
+              <option value="CDD">CDD – Contrat à durée déterminée</option>
+              <option value="CTT">CTT – Contrat de travail temporaire ou Intérim</option>
+              <option value="apprentissage">Contrat d’apprentissage - Alternance</option>
+              <option value="professionnalisation">Contrat de professionnalisation - Alternance</option>
+              <option value="CUI">CUI – Contrat unique d’insertion</option>
+              <option value="stage">Stage</option>
+            </select>
+
+            <br><br><label for="parrain">Parrain / Marraine</label><br><input type="text" id="parrain" name="parrain"><br><br>
+    
+            <br><br><br>
+            <h3>A vous de cocher</h3>
+            <table class="cocher">
+          
+              <tbody>
+    
+                <tr>
+                  <td></td>
+                  <td>
+                    <label><img src="images/emoji1.png" alt="emoji1" name="emoji" id="emoji1"></label>
+                  </td>
+                  <td>
+                    <label><img src="images/emoji2.png" alt="emoji2" name="emoji" id="emoji2"></label>
+                  </td>
+                  <td>
+                    <label><img src="images/emoji3.png" alt="emoji3" name="emoji" id="emoji3"></label>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td><p>Mon entretien de recrutement a été :</p></td>
+                  <td>
+                    <input type="radio" id="emo11" value="vert" name="radio1" class="radio-btn-hide" hidden checked>
+                    <label for="emo11" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                  <td>
+                    <input type="radio" id="emo12" value="jaune" name="radio1" class="radio-btn-hide" hidden>
+                    <label for="emo12" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                  <td>
+                    <input type="radio" id="emo13" value="rouge" name="radio1" class="radio-btn-hide" hidden>
+                    <label for="emo13" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                </tr>
+      
+                <tr>
+                  <td><p>La préparation & le déroulement de mon RDV chez le client a été :</p></td>
+                  <td>
+                    <input type="radio" id="emo21" value="vert" name="radio2" class="radio-btn-hide" hidden checked>
+                    <label for="emo21" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                  <td>
+                    <input type="radio" id="emo22" value="jaune" name="radio2" class="radio-btn-hide" hidden>
+                    <label for="emo22" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                  <td>
+                    <input type="radio" id="emo23" value="rouge" name="radio2" class="radio-btn-hide" hidden>
+                    <label for="emo23" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                </tr>
+      
+                <tr>
+                  <td><p>L’accueil au sein de Labsoft est :</p></td>
+                  <td>
+                    <input type="radio" id="emo31" value="vert" name="radio3" class="radio-btn-hide" hidden checked>
+                    <label for="emo31" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                  <td>
+                    <input type="radio" id="emo32" value="jaune" name="radio3" class="radio-btn-hide" hidden>
+                    <label for="emo32" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                  <td>
+                    <input type="radio" id="emo33" value="rouge" name="radio3" class="radio-btn-hide" hidden>
+                    <label for="emo33" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                </tr>
+      
+                <tr>
+                  <td><p>Mon intégration a été :</p></td>
+                  <td>
+                    <input type="radio" id="emo41" value="vert" name="radio4" class="radio-btn-hide" hidden checked>
+                    <label for="emo41" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                  <td>
+                    <input type="radio" id="emo42" value="jaune" name="radio4" class="radio-btn-hide" hidden>
+                    <label for="emo42" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                  <td>
+                    <input type="radio" id="emo43" value="rouge" name="radio4" class="radio-btn-hide" hidden>
+                    <label for="emo43" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td><p>Mon suivi en entreprise est :</p></td>
+                  <td>
+                    <input type="radio" id="emo51" value="vert" name="radio5" class="radio-btn-hide" hidden checked>
+                    <label for="emo51" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                  <td>
+                    <input type="radio" id="emo52" value="jaune" name="radio5" class="radio-btn-hide" hidden>
+                    <label for="emo52" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                  <td>
+                    <input type="radio" id="emo53" value="rouge" name="radio5" class="radio-btn-hide" hidden>
+                    <label for="emo53" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                </tr>
+      
+                <tr>
+                  <td><p>Le parrainage est :</p></td>
+                  <td>
+                    <input type="radio" id="emo61" value="vert" name="radio6" class="radio-btn-hide" hidden checked>
+                    <label for="emo61" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                  <td>
+                    <input type="radio" id="emo62" value="jaune" name="radio6" class="radio-btn-hide" hidden>
+                    <label for="emo62" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                  <td>
+                    <input type="radio" id="emo63" value="rouge" name="radio6" class="radio-btn-hide" hidden>
+                    <label for="emo63" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                </tr>
+      
+                <tr>
+                  <td><p>L’ambiance chez Labsoft est :</p></td>
+                  <td>
+                    <input type="radio" id="emo71" value="vert" name="radio7" class="radio-btn-hide" hidden checked>
+                    <label for="emo71" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                  <td>
+                    <input type="radio" id="emo72" value="jaune" name="radio7" class="radio-btn-hide" hidden>
+                    <label for="emo72" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                  <td>
+                    <input type="radio" id="emo73" value="rouge" name="radio7" class="radio-btn-hide" hidden>
+                    <label for="emo73" id="prueba" class="label-plus-btn">
+                      <div class="indicateur"></div>
+                    </label>
+                  </td>
+                </tr>
+    
+              </tbody>
+            </table>
+            
+            <br><br>
+            <h3>A vous de répondre</h3>
+            <label for="question1">Pourquoi avoir choisi LabSoft ? *</label><br><br>
+            <textarea name="question1" id="question1" rows="5" cols="50" required></textarea>
+            <br><br>
+            <label for="question2">Si vous aviez une baguette magique, <br>
+              changeriez-vous des éléments dans les process de recrutement et intégration LabSoft ? *</label><br><br>
+            <textarea name="question2" id="question2" rows="5" cols="50" required></textarea>
+            <br><br><br>
+          
+            <input type="submit" value="Envoyer">
+      
+          </form>
+        </div>
+
+      </div>
+      <!-- script pour les particules flottantes  -->
+      <script type="text/javascript" src="js/particles.js"></script>
+      <script type="text/javascript" src="js/particles.min.js"></script>
+      <script type="text/javascript" src="js/app.js"></script>
+
+    </div> 
+  </body>
+</html>
